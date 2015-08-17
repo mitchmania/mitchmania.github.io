@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Capital One Engineering - WWDC 2015: A Month of Playtime</title>
+    <meta name="description" content="Our Mobile Engineering team had a very strong presence at Apple’s annual World Wide Developer Conference (WWDC) this year. We woke up at 4am to stand in line...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/base.css">
+	<link rel="canonical" href="http://capitalone.io/blog/wwdc-2015-month-of-playtime/">
+	<link rel="alternate" type="application/rss+xml" title="Capital One Engineering" href="http://capitalone.io/feed.xml" />
+    
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/base.js"></script>
+</head>
+
+
+  <body>
+    
+      <div class="post">
+	<header id="top_header">
+		<div class="content wrap cf">
+			<a href="/" class="logo_sml"><img src="/assets/img/c1_tech_logo_sml.png" alt="Go to Capital One Tech Blog Home Page"></a>
+			<h1>WWDC 2015: A Month of Playtime</h1>
+			<div class="details">
+				<time><span class="icon icon-clock"></span>Jul 23, 2015</time>
+				<p class="tags"><span class="icon icon-tag"></span>
+					
+	                  ios, 
+	                
+	                  mobile, 
+	                
+	                  wwdc
+	                
+				</p>
+			</div>
+		</div>
+
+		<nav id="main_nav">
+	<div class="wrap cf">
+		<a href="/">Home</a>
+		<a href="https://jobs.capitalone.com/search-jobs/engineering" target="_blank">Careers</a>
+		<a href="/open-source">Open Source</a>
+		<a href="/about">About</a>
+		<a href="#" class="menu"><span class="icon-menu"></span>Menu</a>
+	</div>
+</nav>
+
+	</header>
+</div>
+    
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+
+<div class="post">
+	<section id="main">
+		<div class="wrap cf">
+			<article>
+				<p>Our Mobile Engineering team had a very strong presence at Apple’s annual <a href="https://developer.apple.com/videos/wwdc/2015/">World Wide Developer Conference (WWDC)</a> this year. We woke up at 4am to stand in line together for the keynote, learned about the newest iOS, Swift, WatchOS breakthroughs, met mobile engineers from all over the world, attended the Walk the Moon concert, and proudly sponsored the <a href="https://ti.to/jdbp/live-near-wwdc-2015">James Dempsey and the Breakpoints concert</a> and the <a href="http://www.eventbrite.com/e/women-at-wwdc-lunch-2015-edition-tickets-17103838040">WWDC Girls Lunch</a>!</p>
+
+<p><img src="/assets/posts/james-dempsey-breakpoints.png" alt="James Dempsey and Capital One Mobile" /></p>
+
+<p>Now, a month later, our mobile engineers have been playing around with the latest and greatest. Here is what we’re most excited about!</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/jimmy-s.jpeg" alt="Jimmy" />
+</div>
+
+<h3 id="jimmyhttpstwittercomjsambuo---watchos-2"><a href="https://twitter.com/jsambuo">Jimmy</a> - watchOS 2</h3>
+<p>At WWDC, I was most excited about the watchOS 2 features and went to all of the WatchKit sessions. I’m glad a lot of the known pain points from OS1 were addressed. WatchConnectivity would have helped us a lot while making our watch app. I can’t wait to see the native apps that people make!</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/alex-c.jpg" alt="Jimmy" />
+</div>
+
+<h3 id="alexhttpstwittercomjacabanilla---contextual-awareness"><a href="https://twitter.com/jacabanilla">Alex</a> - Contextual Awareness</h3>
+<p>Apple continues to make the user experience seamless and smooth by expanding the usability of their products.  Whether it’s responsiveness on the surface through improved touch, more efficient animations, or better utilization of the hardware beneath, there’s a renewed commitment to engage users with reactive applications.  A great example of this is the new improved Siri with contextual awareness and intelligent reminders that go straight to the calendar.</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/chad-l.jpeg" alt="Jimmy" />
+</div>
+
+<h3 id="chadhttpstwittercomchadlandis---swift-20"><a href="https://twitter.com/chadlandis">Chad</a> - Swift 2.0</h3>
+<p>Apple added a lot of great new features to Swift 2.  Protocol extensions &amp; default implementations allows for adding new functionality to existing standard library types, as well as your own.  For example, it is now very easy to add new capability to all collection types, in a single place.  Also, by composing your own types primarily of protocols, you get the benefits of multiple inheritance (shared behavior) without all the drawbacks (shared state).  This sounds great in theory; it will be interesting to see how this works in practice.  Also, there’s a new error handling model that enforces safer code at the language level (with new language keywords of do/try/catch).  Errors must now be handled at the call-site.  Previously errors could just be ignored, which allowed issues to slip by.  Now, all those edge cases must be handled explicitly, providing a more stable/predictable code base.  </p>
+
+<p>The new #availability syntax allows for compile time checks to see if a class, property, or method is available for your deployment target.  Supporting multiple OSs is no fun, but this will make it a little easier/safer.  You can even annotate your own code to work with this feature.  There are a number of other improvements that will make working with Swift more enjoyable day to day.  New keywords (guard &amp; defer) will make your code cleaner and more explicit.  Swift now supports multi-payload enums.  Working with generics is a little easier.  Reflection is also now more capable.</p>
+
+<p>Finally, and possibly the most important and exciting announcement, Swift will be open source.  Apple has committed to releasing the compiler and standard library, with support for Linux later this fall.  This opens the door to using Swift on the back-end in the future.  This transforms a client-side mobile developer into a full-stack mobile developer. :)</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/johnathan-l.jpg" alt="Jimmy" />
+</div>
+
+<h3 id="johnhttpstwittercomjglawrence---app-thinning"><a href="https://twitter.com/jglawrence">John</a> - App Thinning</h3>
+<p>App thinning is a great new feature introduced by Apple. There are three components to this: App Slicing, which delivers only the resources an individual devices needs to that device; On Demand Resources, which allows you to store app resources in the App Store and off the device until you need them; and finally, Bitcode, which keeps your app optimized by allowing the App Store to re-compile your app with the latest compiler optimizations. </p>
+
+<div class="contributor">
+	<img src="/assets/img/authors/natasha-murashev.jpeg" alt="Jimmy" />
+</div>
+
+<h3 id="natashahttpstwittercomnatashatherobot---watchkit-complications"><a href="https://twitter.com/natashatherobot">Natasha</a> - WatchKit Complications</h3>
+<p>It’s exciting to have access (however limited) to develop for the consumer’s main interface on the Apple Watch: the actual watch face! Despite their name, Complications (with Time Travel!) are pretty simple to develop for. The complicated part is going to be designing the complication in a way that makes sense for multiple sizes of complication on the watch face - there are currently <strong>five</strong> sizes to consider: Modular Small, Modular Large, Utilitarian Small, Utilitarian Large, and Circular Small!</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/mark-a.jpg" alt="Jimmy" />
+</div>
+
+<h3 id="markhttpstwittercommarkemer---xcode-server"><a href="https://twitter.com/markemer">Mark</a> - Xcode Server</h3>
+<p>I’ve been excited about upcoming release of Xcode Server, seeing how we can use all of its new features to help speed our development in the enterprise. This release has a lot to rave about - highly detailed reports, background thread testing, the ability to test on multiple real devices hooked up to the server, code coverage, and videos and screenshots of UI tests. I’m particularly thrilled to be playing with the new APIs that will let us write a ton of new tools to improve both our workflow and the products we send to the customer.</p>
+
+<div class="contributor">
+	<img src="/assets/img/contributors/victor-l.jpg" alt="Jimmy" />
+</div>
+
+<h3 id="victorhttpstwittercomvictorralov---developer-tools"><a href="https://twitter.com/Victor_Ralov">Victor</a> - Developer Tools</h3>
+<p>As an iOS developer, Xcode 7 and iOS 9 bring improvements that will be reflected in better apps. This year, Apple focused on making better services and tools, such as App Thinning, Xcode 7 UI testing, code
+coverage, and address sanitizing. These new features, along with Multitasking, hint to Apple¹s encouragement to build Universal Apps. As a user, I’m excited about iPad’s Multitasking and Apple Music. I just started using this new music service and I love it!</p>
+
+			</article>
+			<aside class="author">
+				<h2>Posted Jul 23, 2015 by...</h2>
+				<div class="lefty cf">
+					<div class="pic"><img src="" alt=""></div>
+					<p class="name"><strong></strong><span></span></p>
+				</div>
+				<ul class="righty cf">
+					
+
+					
+
+					
+				</ul>
+			</aside>
+		</div>	
+	</section>
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+  <div class="wrap cf">
+    <img src="/assets/img/cof_logo.png" alt="Capital One">
+    <p>
+    	&copy; 2015 Capital One. All rights reserved. The opinions expressed in the posts are those of the individual and don’t necessarily represent those of Capital One. No representations or warranties are made as to any software provided in the posts.  Any software is provided “as-is” and subject to the terms of any underlying open source license agreement. <a href="http://www.capitalone.com/legal/disclosures/">Legal Disclaimer</a> | <a href="http://www.capitalone.com/identity-protection/privacy/">Privacy Policy</a>.
+    </p>
+  </div>
+</footer>
+
+
+    <!-- mobile nav overlay -->
+    <nav id="mobile_nav">
+      <a href="http://capitalone.io"><img src="/assets/img/c1_tech_logo_sml.png" class="logo" alt="Capital One Engineering"></a>
+      <a href="/">Home</a>
+      <a href="https://jobs.capitalone.com/search-jobs/engineering" target="_blank">Careers</a>
+      <a href="/open-source">Open Source</a>
+      <a href="/about">About</a>
+      <a href="#" class="close"><span class="icon-close"></span>Close</a>
+    </nav>
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64630112-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>

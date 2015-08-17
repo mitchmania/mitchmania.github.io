@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Capital One Engineering</title>
+    <description></description>
+    <link>http://capitalone.io/</link>
+    <atom:link href="http://capitalone.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 17 Aug 2015 03:51:11 +0000</pubDate>
+    <lastBuildDate>Mon, 17 Aug 2015 03:51:11 +0000</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Baked vs. Fried – Who’s Hungry on the Cloud?</title>
+        <description>&lt;p&gt;Okay, so this post really isn’t about food, rather it’s about a key concept in how to manage infrastructure on the Cloud.  As we evolve processes for how to automate the provisioning of infrastructure, there are different approaches we can adopt in how to manage the scripting.  Baked &amp;amp; Fried are catchy terms that are used in the industry to describe different automation techniques, and this blog gives some more background on the relative merits of each, and how we’re approaching this.&lt;/p&gt;
+
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Everyone uses terms a little differently, so I’ll reiterate a few of the basics here.  First, I’m making distinctions between instances and images.  For a technology like AWS, the image would be the AMI, and the instance would be EC2.  In the context of this post, distribution relates to the Linux kernel distributions – i.e., RedHat, Ubuntu, AWS.&lt;/p&gt;
+
+&lt;p&gt;The concept of containers is touched on here and is a critical topic by itself, so the context for this is focused on how they can shift configuration away from the instance, and ignores the tooling and methods for how the container is getting packaged, which may be seen as moving the problem around.  Extending the cooking metaphor, a type of frying using containers.&lt;/p&gt;
+
+&lt;h2 id=&quot;provisioning-options&quot;&gt;Provisioning Options&lt;/h2&gt;
+
+&lt;h3 id=&quot;baked&quot;&gt;Baked&lt;/h3&gt;
+&lt;p&gt;Building on the cooking term, the reference is to mix together the different infrastructure and software components ahead of time, and then “bake” them into the image.  This is helpful when standard packages are required every time, and can be included into the base image, like monitoring and security software agents.  This applies to security components as well, and if there are packages that we don’t want installed as default to the image as they can be configured in such a way to open up threats.  It also can be extended for applications, where you create an image that is custom for an application – for example, an image based on Linux, including Tomcat as well as custom Java portal framework libraries.  In our early journeys with datacenter automation, scripting out RPM’s installs were needed to build servers because this is how many images were managed in our environment.  To ensure consistency, we baselined a set of automation and scripting that would yield a core platform image that an application could then be deployed to.  With this approach, there are benefits around the provisioning time; however there is operational overhead with managing a large library of images as we found that we ended up with dozens of different images, each with subtle differences.&lt;/p&gt;
+
+&lt;h3 id=&quot;fried&quot;&gt;Fried&lt;/h3&gt;
+&lt;p&gt;Once again leaning on the cooking term, the reference here is to combine the ingredients during preparation.  This is the primary approach we’re doing on our Cloud platforms, and assumes starting from a base image, then adding software and components on top of it.  In this technique, the number of image instances are few, and the effort is more around the recipes that add software on top of the image.  This heavily leverages tools like Chef, and there are other tools that can be included as well like uDeploy that deploy the application on top of the image.  The benefits are around the simplicity of managing the images, however there can be limitations with this approach if the amount of time required by the recipes is lengthy.  Many of our modern applications have an elasticity component to them, so spawning new instances on the fly is a key requirement, and it’s critical to understand the “frying time” required in this model before new capacity can be effectively utilized.&lt;/p&gt;
+
+&lt;h2 id=&quot;industry-direction&quot;&gt;Industry Direction?&lt;/h2&gt;
+&lt;p&gt;Both provisioning techniques are used within the industry, and it depends on the “cook” to choose which one to leverage.  There are other tools that are getting added to help out in the processes to make additional automation steps easier.  First there is Docker, which builds on the fried concept, whereby a Docker container is provisioned onto an existing image.  This approach helps reduce the number of images, and that any uniqueness for an application is within the container.  There is then a whole ecosystem of tools that then automate the steps within the container creation.  Another technology we’re testing out is Packer, which can take one image, add software components, then create a new ones.  That’s a baking model, but offers controls to make sure we manage the growth in images.&lt;/p&gt;
+
+&lt;h2 id=&quot;which-is-better&quot;&gt;Which is Better?&lt;/h2&gt;
+&lt;p&gt;Both approaches have merit, and since both are automating the provisioning process, they are achieving positive benefits around provisioning speed and consistency.  Like most engineering patterns, choosing which requires understanding the broader context of the environment being managed.  For us, ensuring that security controls are always adhered to is a non-negotiable, so reducing the number of images (and who can create them) is of significant value, so +1 for frying.  There are times where optimizing the provisioning time has value, and unlike in cooking, baking is much quicker than frying.  For the elastic infrastructure approach to be effective, the application can’t just queue up transactions for 20-30 minutes while scripting is running in post-provisioning, so a +1 for the baking approach.  Container proponents will also point this out as an opportunity to cut provisioning times from minutes to seconds, so perhaps that helps us find the sweet spots of both approaches.&lt;/p&gt;
+</description>
+        <author>Mitchell Artin</author>
+        <pubDate>Wed, 05 Aug 2015 10:00:00 +0000</pubDate>
+        <link>http://capitalone.io/blog/baked-vs-fried-whos-hungry-on-the-cloud/</link>
+        <guid isPermaLink="true">http://capitalone.io/blog/baked-vs-fried-whos-hungry-on-the-cloud/</guid>
+        
+        <tag>cloud</tag>
+        
+        <tag>AWS</tag>
+        
+        <tag>devops</tag>
+        
+        <tag>automation</tag>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>WWDC 2015: A Month of Playtime</title>
+        <description>&lt;p&gt;Our Mobile Engineering team had a very strong presence at Apple’s annual &lt;a href=&quot;https://developer.apple.com/videos/wwdc/2015/&quot;&gt;World Wide Developer Conference (WWDC)&lt;/a&gt; this year. We woke up at 4am to stand in line together for the keynote, learned about the newest iOS, Swift, WatchOS breakthroughs, met mobile engineers from all over the world, attended the Walk the Moon concert, and proudly sponsored the &lt;a href=&quot;https://ti.to/jdbp/live-near-wwdc-2015&quot;&gt;James Dempsey and the Breakpoints concert&lt;/a&gt; and the &lt;a href=&quot;http://www.eventbrite.com/e/women-at-wwdc-lunch-2015-edition-tickets-17103838040&quot;&gt;WWDC Girls Lunch&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/james-dempsey-breakpoints.png&quot; alt=&quot;James Dempsey and Capital One Mobile&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, a month later, our mobile engineers have been playing around with the latest and greatest. Here is what we’re most excited about!&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/jimmy-s.jpeg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;jimmyhttpstwittercomjsambuo---watchos-2&quot;&gt;&lt;a href=&quot;https://twitter.com/jsambuo&quot;&gt;Jimmy&lt;/a&gt; - watchOS 2&lt;/h3&gt;
+&lt;p&gt;At WWDC, I was most excited about the watchOS 2 features and went to all of the WatchKit sessions. I’m glad a lot of the known pain points from OS1 were addressed. WatchConnectivity would have helped us a lot while making our watch app. I can’t wait to see the native apps that people make!&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/alex-c.jpg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;alexhttpstwittercomjacabanilla---contextual-awareness&quot;&gt;&lt;a href=&quot;https://twitter.com/jacabanilla&quot;&gt;Alex&lt;/a&gt; - Contextual Awareness&lt;/h3&gt;
+&lt;p&gt;Apple continues to make the user experience seamless and smooth by expanding the usability of their products.  Whether it’s responsiveness on the surface through improved touch, more efficient animations, or better utilization of the hardware beneath, there’s a renewed commitment to engage users with reactive applications.  A great example of this is the new improved Siri with contextual awareness and intelligent reminders that go straight to the calendar.&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/chad-l.jpeg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;chadhttpstwittercomchadlandis---swift-20&quot;&gt;&lt;a href=&quot;https://twitter.com/chadlandis&quot;&gt;Chad&lt;/a&gt; - Swift 2.0&lt;/h3&gt;
+&lt;p&gt;Apple added a lot of great new features to Swift 2.  Protocol extensions &amp;amp; default implementations allows for adding new functionality to existing standard library types, as well as your own.  For example, it is now very easy to add new capability to all collection types, in a single place.  Also, by composing your own types primarily of protocols, you get the benefits of multiple inheritance (shared behavior) without all the drawbacks (shared state).  This sounds great in theory; it will be interesting to see how this works in practice.  Also, there’s a new error handling model that enforces safer code at the language level (with new language keywords of do/try/catch).  Errors must now be handled at the call-site.  Previously errors could just be ignored, which allowed issues to slip by.  Now, all those edge cases must be handled explicitly, providing a more stable/predictable code base.  &lt;/p&gt;
+
+&lt;p&gt;The new #availability syntax allows for compile time checks to see if a class, property, or method is available for your deployment target.  Supporting multiple OSs is no fun, but this will make it a little easier/safer.  You can even annotate your own code to work with this feature.  There are a number of other improvements that will make working with Swift more enjoyable day to day.  New keywords (guard &amp;amp; defer) will make your code cleaner and more explicit.  Swift now supports multi-payload enums.  Working with generics is a little easier.  Reflection is also now more capable.&lt;/p&gt;
+
+&lt;p&gt;Finally, and possibly the most important and exciting announcement, Swift will be open source.  Apple has committed to releasing the compiler and standard library, with support for Linux later this fall.  This opens the door to using Swift on the back-end in the future.  This transforms a client-side mobile developer into a full-stack mobile developer. :)&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/johnathan-l.jpg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;johnhttpstwittercomjglawrence---app-thinning&quot;&gt;&lt;a href=&quot;https://twitter.com/jglawrence&quot;&gt;John&lt;/a&gt; - App Thinning&lt;/h3&gt;
+&lt;p&gt;App thinning is a great new feature introduced by Apple. There are three components to this: App Slicing, which delivers only the resources an individual devices needs to that device; On Demand Resources, which allows you to store app resources in the App Store and off the device until you need them; and finally, Bitcode, which keeps your app optimized by allowing the App Store to re-compile your app with the latest compiler optimizations. &lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/authors/natasha-murashev.jpeg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;natashahttpstwittercomnatashatherobot---watchkit-complications&quot;&gt;&lt;a href=&quot;https://twitter.com/natashatherobot&quot;&gt;Natasha&lt;/a&gt; - WatchKit Complications&lt;/h3&gt;
+&lt;p&gt;It’s exciting to have access (however limited) to develop for the consumer’s main interface on the Apple Watch: the actual watch face! Despite their name, Complications (with Time Travel!) are pretty simple to develop for. The complicated part is going to be designing the complication in a way that makes sense for multiple sizes of complication on the watch face - there are currently &lt;strong&gt;five&lt;/strong&gt; sizes to consider: Modular Small, Modular Large, Utilitarian Small, Utilitarian Large, and Circular Small!&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/mark-a.jpg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;markhttpstwittercommarkemer---xcode-server&quot;&gt;&lt;a href=&quot;https://twitter.com/markemer&quot;&gt;Mark&lt;/a&gt; - Xcode Server&lt;/h3&gt;
+&lt;p&gt;I’ve been excited about upcoming release of Xcode Server, seeing how we can use all of its new features to help speed our development in the enterprise. This release has a lot to rave about - highly detailed reports, background thread testing, the ability to test on multiple real devices hooked up to the server, code coverage, and videos and screenshots of UI tests. I’m particularly thrilled to be playing with the new APIs that will let us write a ton of new tools to improve both our workflow and the products we send to the customer.&lt;/p&gt;
+
+&lt;div class=&quot;contributor&quot;&gt;
+	&lt;img src=&quot;/assets/img/contributors/victor-l.jpg&quot; alt=&quot;Jimmy&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;victorhttpstwittercomvictorralov---developer-tools&quot;&gt;&lt;a href=&quot;https://twitter.com/Victor_Ralov&quot;&gt;Victor&lt;/a&gt; - Developer Tools&lt;/h3&gt;
+&lt;p&gt;As an iOS developer, Xcode 7 and iOS 9 bring improvements that will be reflected in better apps. This year, Apple focused on making better services and tools, such as App Thinning, Xcode 7 UI testing, code
+coverage, and address sanitizing. These new features, along with Multitasking, hint to Apple¹s encouragement to build Universal Apps. As a user, I’m excited about iPad’s Multitasking and Apple Music. I just started using this new music service and I love it!&lt;/p&gt;
+</description>
+        <author>Natasha Murashev</author>
+        <pubDate>Thu, 23 Jul 2015 23:20:00 +0000</pubDate>
+        <link>http://capitalone.io/blog/wwdc-2015-month-of-playtime/</link>
+        <guid isPermaLink="true">http://capitalone.io/blog/wwdc-2015-month-of-playtime/</guid>
+        
+        <tag>ios</tag>
+        
+        <tag>mobile</tag>
+        
+        <tag>wwdc</tag>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Hygieia Dashboard - Making sense out of your DevOps tools</title>
+        <description>&lt;p&gt;Tools are a big part of today’s Agile and DevOps methodologies. A typical project deals with Agile Project Management tool, Source Control, Continuous Integration (CI) tool, Testing tools, Static Code Analysis and Security Scanning tools, Deployment and Monitoring tools to name a few. Large enterprises and complex systems sometimes use multiple CI, Testing and Scanning tools. Each of these has nice dashboards to present key information stored in it. But what is lacking is a single, comprehensive end-to-end view of the state of a delivery pipeline in near real time. &lt;/p&gt;
+
+&lt;p&gt;At Capital One, we believe that while tools, automation and collaboration are very important, a continuous feedback loop is critical to DevOps success. &lt;/p&gt;
+
+&lt;p&gt;We looked for such a visualization tool in the commercial market as well as in the Open Source community. There are some excellent commercial Application Lifecycle Management (ALM) tools that allow one to visualize traceability between stories, code, tests and builds. These tools, however, do not cross over from build to deployment, meaning they do not provide visibility into deployment activities in the same dashboard. There are some good commercial Operations tools that provide visibility into server and applications’ run-time health, metrics, analytics, etc. These also do not provide visibility into the development and build activities. Open source tools/frameworks, such as Grafana, provide generic framework to build a dashboard, but collecting data from the DevOps tools is still a challenge.&lt;/p&gt;
+
+&lt;p&gt;So after evaluating many such dashboard products, we decided it was time to create our own because Capital One needed one single dashboard to visualize the full delivery pipeline at any given point in time.&lt;/p&gt;
+
+&lt;p&gt;When designing and building the dashboard, we focused on making it simple to configure and easy to use. Plus, since we knew it would be useful to others, we built it with the intention of sharing it with the world and offering an open source version.&lt;/p&gt;
+
+&lt;p&gt;Our DevOps dashboard, now known as Hygieia, is used extensively across Capital One, and we’re pleased to now offer it to you.&lt;/p&gt;
+
+&lt;p&gt;One of the &lt;a href=&quot;http://itrevolution.com/the-three-ways-principles-underpinning-devops/&quot;&gt;Three Ways of DevOps&lt;/a&gt; as described by Gene Kim is “Amplify Feedback Loop”. Hygieia is meant to amplify and shorten the feedback loop.&lt;/p&gt;
+
+&lt;p&gt;Here is a sample view of a dashboard configured for a real-life application:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/posts/hygieia-making-sense-of-devops-tools-1.png&quot; alt=&quot;Dashboard&quot; /&gt;
+&lt;img src=&quot;/assets/posts/hygieia-making-sense-of-devops-tools-2.png&quot; alt=&quot;Dashboard&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The dashboard provides two views: Widget view and Pipeline view. &lt;/p&gt;
+
+&lt;p&gt;The widget view shows information about features in the current sprint, code contribution activities, continuous integration activities, code analysis, security analysis, unit and functional test results, deployment and environment status. &lt;/p&gt;
+
+&lt;p&gt;The pipeline view shows the components’ lifecycle progression through DEV, INT, QA, PERF and PROD. &lt;/p&gt;
+
+&lt;p&gt;The main purpose of this dashboard is to make any clog in the pipeline easily visible so that a member of the team can take immediate action to remove it.&lt;/p&gt;
+
+&lt;p&gt;Out of the box, the dashboard application integrates with VersionOne, Jira, Subversion, Github, Hudson/Jenkins, Sonar, HP Fortify, Cucumber/Selenium and IBM Urbancode Deploy. &lt;/p&gt;
+
+&lt;p&gt;We are actively building new features and enhancements, and are asking for feedback from many external organizations. So far, we have received awesome input from tools vendors and many big enterprises. &lt;/p&gt;
+
+&lt;p&gt;Going forward we are hoping for contributions from Open Source communities as well as commercial tools vendor. &lt;/p&gt;
+
+&lt;p&gt;The product will be launched during OSCON July 20-24, 2015 in Portland and is available on &lt;a href=&quot;https://github.com/capitalone/Hygieia&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</description>
+        <author>Tapabrata Pal</author>
+        <pubDate>Mon, 20 Jul 2015 10:25:00 +0000</pubDate>
+        <link>http://capitalone.io/blog/hygieia-making-sense-out-of-your-devops-tools/</link>
+        <guid isPermaLink="true">http://capitalone.io/blog/hygieia-making-sense-out-of-your-devops-tools/</guid>
+        
+        <tag>devops</tag>
+        
+        <tag>open source</tag>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Hello World, this is mitchmania.com</title>
+        <description>&lt;p&gt;I’m excited to introduce a new version of &lt;a href=&quot;http://mitchmania.com&quot;&gt;mitchmania.com&lt;/a&gt;!  Over the years I’ve used the mitchmania name for many things, from simply an email address to a music label.  My latest venture is a technology blog.  In this blog I’ll cover my latest projects, hopefully open-source, topics that I find undocumented in the depths of the internet, and what its like to be a 20-something in the competative and innovative field of computer science.&lt;/p&gt;
+
+&lt;p&gt;Home automation is a field I am very interested in.  While I don’t think I’d make a career out of it, it allows me to apply numerous computer programming languages and softwares to create a product.  My goal two years ago was to create a home automation system without using pre-made products off of the shelf.  I’ve come pretty far integrating simple tools like physical mechanical relays to control lights and ElasticSearch for log aggregatin.  I’m hoping to open-source much of my progress in the coming months, an area I have been lacking.&lt;/p&gt;
+
+&lt;p&gt;I just recently completed an internship doing software development for Capital One.  I did a lot of work with undocumented code, both their’s and other projects, and realized how frustrating it was.  It is my goal to cover some of these projects to hopefully allieviate someone else’s frustrations.  Follow my work, follow my progress, and follow me on twitter &lt;a href=&quot;https://twitter.com/mitchmania&quot;&gt;@mitchmania&lt;/a&gt;&lt;/p&gt;
+</description>
+        <author>Mitchell Artin</author>
+        <pubDate>Fri, 17 Jul 2015 21:35:00 +0000</pubDate>
+        <link>http://capitalone.io/blog/hello-world-this-is-mitchmania/</link>
+        <guid isPermaLink="true">http://capitalone.io/blog/hello-world-this-is-mitchmania/</guid>
+        
+        <tag>engineering</tag>
+        
+        <tag>blog</tag>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Capital One Engineering - Hygieia Dashboard - Making sense out of your DevOps tools</title>
+    <meta name="description" content="Tools are a big part of today’s Agile and DevOps methodologies. A typical project deals with Agile Project Management tool, Source Control, Continuous Integr...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/base.css">
+	<link rel="canonical" href="http://capitalone.io/blog/hygieia-making-sense-out-of-your-devops-tools/">
+	<link rel="alternate" type="application/rss+xml" title="Capital One Engineering" href="http://capitalone.io/feed.xml" />
+    
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/base.js"></script>
+</head>
+
+
+  <body>
+    
+      <div class="post">
+	<header id="top_header">
+		<div class="content wrap cf">
+			<a href="/" class="logo_sml"><img src="/assets/img/c1_tech_logo_sml.png" alt="Go to Capital One Tech Blog Home Page"></a>
+			<h1>Hygieia Dashboard - Making sense out of your DevOps tools</h1>
+			<div class="details">
+				<time><span class="icon icon-clock"></span>Jul 20, 2015</time>
+				<p class="tags"><span class="icon icon-tag"></span>
+					
+	                  devops, 
+	                
+	                  open source
+	                
+				</p>
+			</div>
+		</div>
+
+		<nav id="main_nav">
+	<div class="wrap cf">
+		<a href="/">Home</a>
+		<a href="https://jobs.capitalone.com/search-jobs/engineering" target="_blank">Careers</a>
+		<a href="/open-source">Open Source</a>
+		<a href="/about">About</a>
+		<a href="#" class="menu"><span class="icon-menu"></span>Menu</a>
+	</div>
+</nav>
+
+	</header>
+</div>
+    
+
+    <div class="page-content">
+      <div class="wrapper">
+        
+
+<div class="post">
+	<section id="main">
+		<div class="wrap cf">
+			<article>
+				<p>Tools are a big part of today’s Agile and DevOps methodologies. A typical project deals with Agile Project Management tool, Source Control, Continuous Integration (CI) tool, Testing tools, Static Code Analysis and Security Scanning tools, Deployment and Monitoring tools to name a few. Large enterprises and complex systems sometimes use multiple CI, Testing and Scanning tools. Each of these has nice dashboards to present key information stored in it. But what is lacking is a single, comprehensive end-to-end view of the state of a delivery pipeline in near real time. </p>
+
+<p>At Capital One, we believe that while tools, automation and collaboration are very important, a continuous feedback loop is critical to DevOps success. </p>
+
+<p>We looked for such a visualization tool in the commercial market as well as in the Open Source community. There are some excellent commercial Application Lifecycle Management (ALM) tools that allow one to visualize traceability between stories, code, tests and builds. These tools, however, do not cross over from build to deployment, meaning they do not provide visibility into deployment activities in the same dashboard. There are some good commercial Operations tools that provide visibility into server and applications’ run-time health, metrics, analytics, etc. These also do not provide visibility into the development and build activities. Open source tools/frameworks, such as Grafana, provide generic framework to build a dashboard, but collecting data from the DevOps tools is still a challenge.</p>
+
+<p>So after evaluating many such dashboard products, we decided it was time to create our own because Capital One needed one single dashboard to visualize the full delivery pipeline at any given point in time.</p>
+
+<p>When designing and building the dashboard, we focused on making it simple to configure and easy to use. Plus, since we knew it would be useful to others, we built it with the intention of sharing it with the world and offering an open source version.</p>
+
+<p>Our DevOps dashboard, now known as Hygieia, is used extensively across Capital One, and we’re pleased to now offer it to you.</p>
+
+<p>One of the <a href="http://itrevolution.com/the-three-ways-principles-underpinning-devops/">Three Ways of DevOps</a> as described by Gene Kim is “Amplify Feedback Loop”. Hygieia is meant to amplify and shorten the feedback loop.</p>
+
+<p>Here is a sample view of a dashboard configured for a real-life application:</p>
+
+<p><img src="/assets/posts/hygieia-making-sense-of-devops-tools-1.png" alt="Dashboard" />
+<img src="/assets/posts/hygieia-making-sense-of-devops-tools-2.png" alt="Dashboard" /></p>
+
+<p>The dashboard provides two views: Widget view and Pipeline view. </p>
+
+<p>The widget view shows information about features in the current sprint, code contribution activities, continuous integration activities, code analysis, security analysis, unit and functional test results, deployment and environment status. </p>
+
+<p>The pipeline view shows the components’ lifecycle progression through DEV, INT, QA, PERF and PROD. </p>
+
+<p>The main purpose of this dashboard is to make any clog in the pipeline easily visible so that a member of the team can take immediate action to remove it.</p>
+
+<p>Out of the box, the dashboard application integrates with VersionOne, Jira, Subversion, Github, Hudson/Jenkins, Sonar, HP Fortify, Cucumber/Selenium and IBM Urbancode Deploy. </p>
+
+<p>We are actively building new features and enhancements, and are asking for feedback from many external organizations. So far, we have received awesome input from tools vendors and many big enterprises. </p>
+
+<p>Going forward we are hoping for contributions from Open Source communities as well as commercial tools vendor. </p>
+
+<p>The product will be launched during OSCON July 20-24, 2015 in Portland and is available on <a href="https://github.com/capitalone/Hygieia">Github</a>.</p>
+
+			</article>
+			<aside class="author">
+				<h2>Posted Jul 20, 2015 by...</h2>
+				<div class="lefty cf">
+					<div class="pic"><img src="" alt=""></div>
+					<p class="name"><strong></strong><span></span></p>
+				</div>
+				<ul class="righty cf">
+					
+
+					
+
+					
+				</ul>
+			</aside>
+		</div>	
+	</section>
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+  <div class="wrap cf">
+    <img src="/assets/img/cof_logo.png" alt="Capital One">
+    <p>
+    	&copy; 2015 Capital One. All rights reserved. The opinions expressed in the posts are those of the individual and don’t necessarily represent those of Capital One. No representations or warranties are made as to any software provided in the posts.  Any software is provided “as-is” and subject to the terms of any underlying open source license agreement. <a href="http://www.capitalone.com/legal/disclosures/">Legal Disclaimer</a> | <a href="http://www.capitalone.com/identity-protection/privacy/">Privacy Policy</a>.
+    </p>
+  </div>
+</footer>
+
+
+    <!-- mobile nav overlay -->
+    <nav id="mobile_nav">
+      <a href="http://capitalone.io"><img src="/assets/img/c1_tech_logo_sml.png" class="logo" alt="Capital One Engineering"></a>
+      <a href="/">Home</a>
+      <a href="https://jobs.capitalone.com/search-jobs/engineering" target="_blank">Careers</a>
+      <a href="/open-source">Open Source</a>
+      <a href="/about">About</a>
+      <a href="#" class="close"><span class="icon-close"></span>Close</a>
+    </nav>
+    
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-64630112-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    
+  </body>
+</html>
