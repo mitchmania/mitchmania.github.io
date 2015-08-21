@@ -23,9 +23,11 @@ title: Open Source Code
                 <h3>{{ project.title }}</h3>
               </header> 
               <p class="excerpt">{{ project.content }}</p>
-              <div class="centered">
-                <a href="{{ project.source_url }}" class="button regressive">View on {{ project.source }}</a>
-              </div>
+              {% if {{project.view}}==true %}
+                <div class="centered">
+                  <a href="{{ project.source_url }}" class="button regressive">View on {{ project.source }}</a>
+                </div>
+              {% endif %}
             </article>
           </div>
         {% if loopindex == 0 %}
