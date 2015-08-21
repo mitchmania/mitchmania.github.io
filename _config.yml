@@ -1,9 +1,9 @@
 # Site settings
-title: Capital One Engineering
+title: mItChMaNiA Labs
 baseurl: ""
-url: "http://capitalone.io"
-twitter: capitalonelabs
-github:  capitalone
+url: "http://mitchmania.com"
+twitter: mitchmania
+github:  mitchmania
 permalink: /:categories/:title/
 analyticsEnabled: true
 
