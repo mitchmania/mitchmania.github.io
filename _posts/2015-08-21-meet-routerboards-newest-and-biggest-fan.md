@@ -11,5 +11,6 @@ I grew up flashing (and sometimes bricking) Linksys WRT routers.  My favorite fi
 Amazon sold me a [Mikrotik RouterBOARD Rackmount Gigabit Router RB2011UiAS-RM](http://routerboard.com/RB2011UiAS-RM) and a [Mikrotik RouterBOARD Desktop Gigabit Router RB951G-2HnD](http://routerboard.com/RB951G-2HnD).
 
 ![RouterBOARD router in the Gainesville rack]({{ site.baseurl }}/assets/posts/routerboard_gv.jpg)
+RouterBOARD router in the Gainesville rack
 
 It took a few hours to figure out the default set of firewall rules and how to migrate my VPN over but I got it and it is working great!  Posting this from behind it right now in fact.  I'm really enjoying the firewall's similarity to iptables.  Come back soon to check out the tutorials I will post on how to make the most out of your RouterBOARD setup.
