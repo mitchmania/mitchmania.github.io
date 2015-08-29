@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I learned to use UUID mount points the hard way"
+title: "How I learned to use UUIDs in fstab the hard way"
 date: 2015-08-28 15:00:00
 author: Mitchell Artin
 tags: linux cameras
