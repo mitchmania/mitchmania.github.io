@@ -16,4 +16,4 @@ This fact value is returned as type string.  When trying to use this in various 
 
 So will this round 6.6 to 7 or will it truncate the value and return 6?
 
-I couldn't find this issue documented anywhere (probably because everyone does it for themselves to figure it out).  Ansible does not round, it simply truncates.  6.6|int will return 6.
+I couldn't find this issue documented anywhere (probably because everyone does it for themselves to figure it out).  Ansible does not round, it simply truncates.  6.6\|int will return 6.
