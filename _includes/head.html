@@ -14,4 +14,9 @@
     
     <script type="text/javascript" src="{{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="{{ "/assets/js/base.js" | prepend: site.baseurl }}"></script>
+    <script>
+		var host = "mitchmania.com";
+		if ((host == window.location.host) && (window.location.protocol != "https:"))
+    		window.location.protocol = "https";
+</script>
 </head>
