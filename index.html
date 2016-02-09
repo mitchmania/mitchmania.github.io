@@ -5,6 +5,20 @@ layout: default
 <section id="main">
   <section id="post_list">
     <div class="wrap cf">
+
+      {% assign author = site.authors | where:"name",post.author | first %}
+      
+      <article>
+        <header>
+          <div class="author cf">
+            <div class="pic"><img src="{{ author.image | prepend: site.baseurl }}" alt="{{ author.name }}"></div>
+            <p class="name"><strong>{{ author.name }}</strong><span>{{ author.job_title }}</span></p>
+          </div>
+          <h3><a href="{{ post.url | prepend: site.baseurl }}">Welcome to MitchMania Labs</a></h3>
+        </header> 
+        <p class="excerpt">This is a site about Mitch.</p>
+      </article>
+    
       {% for post in site.posts %}
         {% assign author = site.authors | where:"name",post.author | first %}
         
