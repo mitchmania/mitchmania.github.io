@@ -10,7 +10,11 @@ I have finally released the code for my network-based thermostat.  I have succes
 
 To build it you will need the [code on my Github](https://github.com/mitchmania/Arduino_Thermostat), an Arduino Mega 2560 (or suitable substitute with sufficient I/O pin space), an Arduino Ethernet Shield, 6 relays, 20x4 character LCD display, and DHT11 temperature sensor.  I have included a schematic of this build below.  It is network based and will return an HTML-formatted page if you visit the home-page.  Visit the /json page of the thermostat and you will get a formatted JSON response.  Both are shown below.  All requests are GET for simplicity of interfacing with the other devices and programs on my network.  I wrote in an NTP client so that the Thermostat can also display the current time on the LCD display.  It will also track time that cooling or heating systems are powered.  Each time it changes state (A/C started up, furnace shut off) it can optionally log to server.  It does this by sending a UDP packet with appropriate information to a listening server.  I used this in my house to log to a Splunk instance to keep track of my energy usage.
 
-![Thermostat Responses]({{ site.baseurl }}/assets/posts/thermostat_responses.png)The two interfaces provided by the thermostat
+![Thermostat Schematic]({{ site.baseurl }}/assets/posts/thermostat_schem.jpg)
+Thermostat Schematic
+
+![Thermostat Responses]({{ site.baseurl }}/assets/posts/thermostat_responses.png)
+The two interfaces provided by the thermostat
 
 ![Thermostat LCD Display]({{ site.baseurl }}/assets/posts/thermostat_lcd.jpg)
 LCD Display
