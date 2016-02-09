@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "In Production: MitchMania Labs API"
-date: 2016-02-09 14:14:00
+date: 2016-02-08 14:14:00
 author: Mitchell Artin
 tags: open-source home-automation python flask api networking RESTful releases
 category: blog
