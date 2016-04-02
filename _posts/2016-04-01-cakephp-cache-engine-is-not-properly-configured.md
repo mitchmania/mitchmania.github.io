@@ -16,9 +16,8 @@ RuntimeException
 ![CakePHP Cache engine Error]({{ site.baseurl }}/assets/posts/cakephp_cache_engine_error.png)
 
 I resolved this by correcting permissions on the 'logs' and 'tmp' directories in my web app directory.  When installing with CakePHP with Composer, by default it will give 'logs' and 'tmp' directories globally writeable permissions.  You can restore these with the following command
-```
+```bash
 chmod 777 tmp -R
-
 chmod 777 logs -R
 ```
 
