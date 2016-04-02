@@ -9,6 +9,7 @@ category: blog
 I was working on a CakePHP site (v. 3.2.3 with PHP 7.0.5) and got the following unhelpful error:
 ```
 Cache engine Cake\Cache\Engine\FileEngine is not properly configured.
+
 RuntimeException
 ```
 
@@ -17,6 +18,7 @@ RuntimeException
 I resolved this by correcting permissions on the 'logs' and 'tmp' directories in my web app directory.  When installing with CakePHP with Composer, by default it will give 'logs' and 'tmp' directories globally writeable permissions.  You can restore these with the following command
 ```
 chmod 777 tmp -R
+
 chmod 777 logs -R
 ```
 
