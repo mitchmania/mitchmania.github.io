@@ -15,6 +15,7 @@ RuntimeException
 I resolved this by correcting permissions on the 'logs' and 'tmp' directories in my web app directory.  When installing with CakePHP with Composer, by default it will give 'logs' and 'tmp' directories globally writeable permissions.  You can restore these with the following command
 
 chmod 777 tmp -R
+
 chmod 777 logs -R
 
 However, this can definitely be more secure.  Change the owner of these directories to the account your http daemon runs as.  Make sure that this user only has write permissions recursively to these directories.
