@@ -5,6 +5,7 @@ date: 2015-08-28 15:00:00
 author: Mitchell Artin
 tags: linux cameras
 category: blog
+excerpt: When I first read about fstab I was probably 12 years old.  I was using the device files in the /dev directory with fdisk with success for months so I figured this success would carry over to fstab.  I looked at the UUID's the OS was using to mount its basic partitions and in my blissful ignorance of childhood went "psshh who needs that".
 ---
 When I first read about fstab I was probably 12 years old.  I was using the device files in the /dev directory with fdisk with success for months so I figured this success would carry over to fstab.  I looked at the UUID's the OS was using to mount its basic partitions and in my blissful ignorance of childhood went "psshh who needs that".
 

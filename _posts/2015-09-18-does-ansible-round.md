@@ -5,6 +5,7 @@ date: 2015-09-18 21:35:00
 author: Mitchell Artin
 tags: ansible programming
 category: blog
+excerpt: Ansible collects facts about machines it connects to by default.  One of them when connecting to a RedHat 6.6 box is "ansible_distribution_version"
 ---
 Ansible collects facts about machines it connects to by default.  One of them when connecting to a RedHat 6.6 box is:
 

@@ -5,6 +5,7 @@ date: 2015-07-17 21:35:00
 author: Mitchell Artin
 tags: engineering blog
 category: blog
+excerpt: I'm excited to introduce a new version of [mitchmania.com](http://mitchmania.com)!  Over the years I've used the mitchmania name for many things, from simply an email address to a music label.  My latest venture is a technology blog.
 ---
 I'm excited to introduce a new version of [mitchmania.com](http://mitchmania.com)!  Over the years I've used the mitchmania name for many things, from simply an email address to a music label.  My latest venture is a technology blog.  In this blog I'll cover my latest projects, hopefully open-source, topics that I find undocumented in the depths of the Internet, and what its like to be a 20-something in the competitive and innovative field of computer science.
 

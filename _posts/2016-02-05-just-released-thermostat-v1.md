@@ -5,6 +5,7 @@ date: 2016-02-05 19:35:00
 author: Mitchell Artin
 tags: open-source home-automation arduino c releases
 category: blog
+excerpt: I have finally released the code for my network-based thermostat.  I have successfully used it as my sole thermostat in my house for the past three years so I am confident the majority of it is bug-free.  It also includes functionality to control light switches.  In the included screeenshot you can see I have it setup to control lights in my dining room, kitchen, etc.
 ---
 I have finally released the code for my network-based thermostat.  I have successfully used it as my sole thermostat in my house for the past three years so I am confident the majority of it is bug-free.  It also includes functionality to control light switches.  In the included screeenshot you can see I have it setup to control lights in my dining room, kitchen, etc.  With a slight copy/paste code modification, you can add as many relays to control other devices as you have pins available on your Arduino.
 

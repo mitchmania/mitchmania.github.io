@@ -5,6 +5,7 @@ date: 2015-08-21 15:00:00
 author: Mitchell Artin
 tags: networking rack routers vpn
 category: blog
+excerpt: I grew up flashing (and sometimes bricking) Linksys WRT routers.  My favorite firmwares were OpenWrt and DD-WRT to give me the features I really needed.  When I heard of [RouterBOARD](http://www.routerboard.com) and [RouterOS](http://www.mikrotik.com/software) I knew I was on to something good.
 ---
 I grew up flashing (and sometimes bricking) Linksys WRT routers.  My favorite firmwares were OpenWrt and DD-WRT to give me the features I really needed.  When I heard of [RouterBOARD](http://www.routerboard.com) and [RouterOS](http://www.mikrotik.com/software) I knew I was on to something good.  Affordable routers packing enterprise-class features with a huge variety of hardware.  I was already using [SmoothWall Express](http://www.smoothwall.org) on two old Dell Optiplex 755s but I just got sick of these power-hungry desktops kicking around.  My network consists of one router in my college house and two routers in my parents basement.  PRO TIP: Always replicate your services on a server rack running out of your parents basement.
 

@@ -5,6 +5,7 @@ date: 2016-02-08 14:14:00
 author: Mitchell Artin
 tags: open-source home-automation python flask api networking RESTful releases
 category: blog
+excerpt: I use a ton of different technologies in my house, probably too many.  I an Arduino-based thermostat powering A/C and lighting, Raspberry-Pi's monitoring doors, docker containers monitoring dynamic IP address changes, GlusterFS powering high-availability filesystems, and many other projects.  It has gotten to the point where I cannot remember where everything is on my network and I needed one centralized place to go.
 ---
 I use a ton of different technologies in my house, probably too many.  I an Arduino-based thermostat powering A/C and lighting, Raspberry-Pi's monitoring doors, docker containers monitoring dynamic IP address changes, GlusterFS powering high-availability filesystems, and many other projects.  It has gotten to the point where I cannot remember where everything is on my network and I needed one centralized place to go.  It had to get me all of the information I needed and control everything in my house.
 
