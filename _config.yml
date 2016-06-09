@@ -6,6 +6,7 @@ twitter: mitchmania
 github:  mitchmania
 permalink: /:categories/:title/
 analyticsEnabled: true
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: redcarpet
