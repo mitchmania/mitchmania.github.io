@@ -5,6 +5,7 @@ date: 2016-04-01 15:04:00
 author: Mitchell Artin
 tags: open-source php frameworks error tutorial
 category: blog
+excerpt: I was working on a CakePHP site (v. 3.2.3 with PHP 7.0.5) and got the following unhelpful error
 ---
 I was working on a CakePHP site (v. 3.2.3 with PHP 7.0.5) and got the following unhelpful error:
 ```
