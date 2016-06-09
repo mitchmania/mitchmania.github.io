@@ -5,11 +5,11 @@ date: 2015-09-09 15:00:00
 author: Mitchell Artin
 tags: virtualization music r-pi networking
 category: blog
-excerpt: I've always been a lover of music.  So it makes sense that I'd want music in every room of my house.  My house can be separated into three main rooms: bedroom, office, and living room.  I have a stereo in each room along with an Ethernet connection and a Raspberry Pi.
+excerpt: I have always been a lover of music.  So it makes sense that I'd want music in every room of my house.  My house can be separated into three main rooms: bedroom, office, and living room.  I have a stereo in each room along with an Ethernet connection and a Raspberry Pi.
 
 ---
 
-I've always been a lover of music.  So it makes sense that I'd want music in every room of my house.  My house can be separated into three main rooms: bedroom, office, and living room.  I have a stereo in each room along with an Ethernet connection and a Raspberry Pi.
+I have always been a lover of music.  So it makes sense that I'd want music in every room of my house.  My house can be separated into three main rooms: bedroom, office, and living room.  I have a stereo in each room along with an Ethernet connection and a Raspberry Pi.
 
 This is a simple diagram of what I'm dealing with.
 ![Multi-zone Music System Diagram]({{ site.baseurl }}/assets/posts/multicast_music_system.png)
