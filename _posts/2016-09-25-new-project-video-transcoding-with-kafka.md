@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New Project - Distributing Video Transcoding Jobs using Apache Kafka"
+title: "New Project: Distributing Video Transcoding Jobs using Apache Kafka"
 date: 2016-09-25 12:00:00
 author: Mitchell Artin
 tags: open-source kafka project mitchflix
