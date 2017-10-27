@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "XenTk - A Crossplatform GUI for Citrix Xensever"
+title: "XenTk - A Crossplatform GUI for Citrix Xenserver"
 date: 2017-10-27 21:35:00
 author: Mitchell Artin
 tags: xencenter xenserver tkinter python programming
