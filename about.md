@@ -1,8 +1,7 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-Hello, my name is Mitchell Artin and welcome to my computer science blog!  I have many hobbies from maintaining tropical aquariums to cycling but I am most passionate about computer science.  You can often find me hacking away at my own network infrastructure on many a late night.  During the day I'm studying computer science at the University of Florida and also working in their Network Administration department.  I'm constantly trying to expand my knowledge and share what I've learned along the way.  A self-acclaimed workaholic (I really enjoy what I do), I've worked at many other companies like Capital One, City of Ormond Beach IT, and Grassroots Motorsports.  I hope to use this website to share my experiences and knowledge to hopefully help and inspire others.  You can view my resume [here]({{ site.baseurl }}/Resume_na_2_9_16.pdf).
-![Mitchell Artin]({{ site.baseurl }}/assets/img/authors/mitchell-artin-pro.jpeg)
+Hello, my name is Mitchell Artin.  I am a computer science undergraduate student at the University of Florida.  I am currently working as a software development co-op engineer at [Planetary Resources](https://planetaryresources.com).  I am tasked with development of flight and ground software in Python to operate our Arkyd 6 spacecraft.  Arkyd 6 is a cubesat we are using as a testbed for the electronics and software we have developed in-house.  It is the most enjoyable work I have done thus far.  My software work on the SpaceX Hyperloop comes in at a close second.  I am actively seeking full-time job oppurtunities in the greater Seattle area after my graduation in May 2018.  You can view my resume [here]({{ site.baseurl }}/Resume_na_10_27_17.pdf).
