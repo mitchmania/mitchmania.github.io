@@ -8,3 +8,10 @@ h1 stronger {
     display: block;
     font-size: 120%;
 }
+
+aside {
+    width: 30%;
+    padding-left: 15px;
+    margin-left: 15px;
+    float: right;
+}
