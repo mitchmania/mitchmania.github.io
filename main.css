@@ -1,0 +1,10 @@
+h1 strong {
+    display: block;
+    font-size: 65%;
+    opacity: 0.75;
+}
+
+h1 stronger {
+    display: block;
+    font-size: 120%;
+}
