@@ -15,3 +15,8 @@ aside {
     margin-left: 15px;
     float: right;
 }
+
+body {
+    max-width: 900px;
+    margin: 35 auto;
+}
